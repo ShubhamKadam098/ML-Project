@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * ::after ::before{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            
+            body , html{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            a{
+                cursor: pointer;
+                text-decoration: none;
+                text-transform: capitalize;
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 0.8rem 1.5rem;
+                border-radius: 50px;
+                background-color: #000;
+                color: #fff;
+                width: 200px;
+                border: #000 1px solid;
+                margin-top: 30px;
+            }
+            
+            header{
+                display: flex;
+                background: #964B00;
+                text-transform: capitalize;
+                padding: 0.5rem 0;
+                border: #000 1px solid;
+                justify-content: center;
+                font-size: medium;
+                color: #fff;
+                margin-bottom: 50px;
+            }
+            
+            .coloum{
+                display: flex; 
+                width: 80%;   
+                margin: 0 auto;
+                justify-content: space-around;
+                align-content: center;
+                padding: 0.5rem;
+                gap: 1rem;
+            }
+            .coloum > *{
+                flex-basis: 100%;
+            }
+            .image img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            .prediction h1{
+                color: green;
+            }
+            .btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }            
+        </style>
+        <title>Result</title>
+    </head>
+    <body>
+        <header>
+            <h1>prediction</h1>
+        </header>
+        
+        {%if data == 0%}
+        <div class="coloum">
+            <div class="image">
+                <img src="static\setosa.jpg" alt="setosa">
+            </div>  
+            <div class="prediction">
+                <h1>Iris-Setosa</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus explicabo distinctio eius aspernatur maiores nobis animi magni rerum provident veritatis iste consectetur odit fugiat iusto officia, accusantium, laudantium vitae. Illo minus blanditiis quis facilis error, in earum dicta quaerat iure, natus rerum ad vero expedita eos incidunt quam ut veniam..</p>
+            </div>
+        </div>
+        {%else%}
+        <div class="coloum">
+            <div class="image">
+                <img src="static\verci.jpg" alt="verci">
+            </div>  
+            <div class="prediction">
+                <h1>Iris-versicolor</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sunt mollitia sit magnam pariatur expedita fugit maxime beatae minima nihil, quod temporibus, quisquam inventore ut? Molestias explicabo sit reprehenderit ab minus similique atque quaerat ea consequatur nisi aut, debitis veritatis. Sapiente assumenda beatae nemo vel deserunt delectus, perferendis ratione eius.</p>
+            </div>
+        </div>
+        {%endif%}
+        <br><br>
+        <div class="btn">
+            <a href='/'>go back to home page</a>
+        </div>
+
+    </body>
+
+</html>
+
+
+
+
+
+
